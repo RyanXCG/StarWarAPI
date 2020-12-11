@@ -1,6 +1,7 @@
 import React, { Component, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
+import "../cssFiles/homePage.css";
 
 import ResultList from "./ResultList";
 
@@ -17,8 +18,8 @@ function HomePage() {
   };
 
   return (
-    <div>
-      <h2>Star War Logo here</h2>
+    <div className="homePage">
+      <h2>Star War Search</h2>
       <form>
         <label>
           <FontAwesomeIcon icon={faSearch} />{" "}
@@ -62,8 +63,6 @@ function HomePage() {
       </form>
       <button onClick={onSearchClicked}>Search</button>
 
-      <p>"input test: "{search}</p>
-      <p>"radio test: "{searchType}</p>
       <ResultList searchSub={searchSub} searchTypeSub={searchTypeSub} />
     </div>
   );
